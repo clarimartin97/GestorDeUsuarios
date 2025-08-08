@@ -32,7 +32,7 @@ const ComponenteBuscador = ({ onBuscar, cargando = false, onLimpiar }) => {
     };
 
     return (
-        <div className="relative max-w-md mx-auto mb-6">
+        <div className="relative max-w-md sm:max-w-lg mx-auto mb-6">
             <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <svg

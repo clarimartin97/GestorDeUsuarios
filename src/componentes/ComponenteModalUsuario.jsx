@@ -65,7 +65,7 @@ const ComponenteModalUsuario = ({ estaAbierto, onCerrar, usuario, cargando = fal
 
     return (
         <div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-2 sm:p-4 z-50"
             onClick={manejarClickFondo}
             role="dialog"
             aria-modal="true"
@@ -73,10 +73,10 @@ const ComponenteModalUsuario = ({ estaAbierto, onCerrar, usuario, cargando = fal
         >
             <div
                 ref={modalRef}
-                className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+                className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto mx-4 sm:mx-0"
             >
-                <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                    <h2 id="modal-titulo" className="text-xl font-semibold text-gray-900">
+                <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
+                    <h2 id="modal-titulo" className="text-lg sm:text-xl font-semibold text-gray-900">
                         Detalles del Usuario
                     </h2>
                     <button
@@ -91,7 +91,7 @@ const ComponenteModalUsuario = ({ estaAbierto, onCerrar, usuario, cargando = fal
                     </button>
                 </div>
 
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                     {cargando ? (
                         <div className="flex flex-col items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
@@ -184,7 +184,7 @@ const ComponenteModalUsuario = ({ estaAbierto, onCerrar, usuario, cargando = fal
                     )}
                 </div>
 
-                <div className="flex justify-end p-6 border-t border-gray-200">
+                <div className="flex justify-end p-4 sm:p-6 border-t border-gray-200">
                     <button
                         onClick={onCerrar}
                         className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"

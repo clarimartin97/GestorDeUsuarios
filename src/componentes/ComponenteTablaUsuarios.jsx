@@ -131,7 +131,7 @@ const ComponenteTablaUsuarios = ({ usuarios = [], onClickUsuario, cargando = fal
                                             {usuario.role || 'usuario'}
                                         </span>
                                     </div>
-                                    <p className="mt-1 text-sm text-gray-600 truncate">
+                                    <p className="mt-1 text-sm text-gray-600 break-all">
                                         {usuario.email}
                                     </p>
                                 </div>

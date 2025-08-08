@@ -179,10 +179,10 @@ function App() {
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-6">
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Explorador de Usuarios
             </h1>
-            <p className="mt-2 text-sm text-gray-600">
+            <p className="mt-2 text-sm sm:text-base text-gray-600">
               Explora y busca usuarios de la plataforma
             </p>
           </div>
@@ -198,21 +198,21 @@ function App() {
 
         {estaEnBusquedaMode && terminoBusqueda && (
           <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <svg className="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+              <div className="flex items-center flex-wrap">
+                <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <span className="text-sm text-blue-800">
-                  Resultados de búsqueda para: <strong>"{terminoBusqueda}"</strong>
+                  Resultados de búsqueda para: <strong className="break-words">"{terminoBusqueda}"</strong>
                 </span>
-                <span className="ml-2 text-xs text-blue-600">
+                <span className="ml-2 text-xs text-blue-600 whitespace-nowrap">
                   ({totalUsuarios} resultado{totalUsuarios !== 1 ? 's' : ''})
                 </span>
               </div>
               <button
                 onClick={limpiarBusqueda}
-                className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                className="text-blue-600 hover:text-blue-800 text-sm font-medium whitespace-nowrap"
               >
                 Limpiar búsqueda
               </button>
